@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 		return -1;
 	}
 
-	/* Set MUX to promiscuous mode - do we need to do this every time? */
+	/* Set interface to promiscuous mode - do we need to do this every time? */
 	strncpy(ifopts.ifr_name, ifName, IFNAMSIZ-1);
 	ioctl(sockfd, SIOCGIFFLAGS, &ifopts);
 	ifopts.ifr_flags |= IFF_PROMISC;
